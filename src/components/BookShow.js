@@ -1,5 +1,5 @@
 function BookShow({ book, onDelete }) {
-  const handleClick = () => {
+  const handleDeleteClick = () => {
     onDelete(book.id);
   };
 
@@ -7,7 +7,7 @@ function BookShow({ book, onDelete }) {
     <div className="book-show">
       {book.title}
       <div className="actions">
-        <button className="delete" onClick={handleClick}>
+        <button className="delete" onClick={handleDeleteClick}>
           Delete
         </button>
       </div>

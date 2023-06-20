@@ -11,7 +11,7 @@ function App() {
       // if returns true, we want to keep the book around.
       // if returns false, we don't want the book anymore.
       return book.id !== id;
-      //after create the new array "updateBooks", we update the "books" state
+      //after create the new array updateBooks, update "books" state
       setBooks(updatedBooks);
     });
   };
