@@ -9,25 +9,25 @@ function BookShow({ book, onDelete }) {
   };
 
   const handleEditClick = () => {
-    setShowEdit(!showEdit); // !showedit = no showEdit
+    setShowEdit(!showEdit); // toggle !showedit = no showEdit
   };
 
   let content = <h3>{book.title}</h3>;
   if (showEdit) {
     //if showEdit is true, I don't want to display {book.title},
     // instead it will show the <BookEdit/> component
-    content = <BookEdit />;
+    content = <BookEdit book={book} />;
   }
 
   return (
     <div className="book-show">
       <div>{content}</div>
       <div className="actions">
-        <button className="delete" onClick={handleDeleteClick}>
-          Delete
-        </button>
         <button className="edit" onClick={handleEditClick}>
           Edit
+        </button>
+        <button className="delete" onClick={handleDeleteClick}>
+          Delete
         </button>
       </div>
     </div>
